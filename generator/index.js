@@ -1,21 +1,41 @@
 module.exports = (api, options, rootOptions) => {
+  // 复制并用 ejs 渲染 `./template` 内所有的文件
+  api.render('../template')
   // 修改 `package.json` 里的字段
   api.extendPackage({
+    dependencies: {
+      'axios': '^0.18.0',
+      'js-cookie': '^2.2.0',
+      'vue-router': '^3.0.3',
+      'vuex': '^3.1.0',
+      'normalize.css': '^8.0.1'
+    },
+    devDependencies: {
+      'git-cz': '^2.0.0',
+      'compression-webpack-plugin': '^2.0.0'
+    },
     scripts: {
-      test: 'vue-cli-service  command'
+      'dev': 'vue-cli-service serve',
+      'build:testing': 'vue-cli-service build --mode testing',
+      'build:staging': 'vue-cli-service build --mode staging',
+      'build:production': 'vue-cli-service build',
+      'commit': 'git add . && npx git-cz'
+    },
+    config: {
+      commitizen: {
+        path: './node_modules/git-cz'
+      }
+    },
+    gitHooks: {
+      'commit-msg': 'node scripts/verifyCommitMsg.js'
     }
   })
 
-  // 复制并用 ejs 渲染 `./template` 内所有的文件
-  api.render('../template')
-
-  if (options.module === 'module1') { 
-    // options.module 可以访问上面问题数组的第一个对象的值，默认为: 'module0'
-    console.log(`Your choice is ${options.module}`)
-  }
-
-  if (options.moduleName === 'myModule') {
-    // options.moduleName 可以访问到用户从控制台输入的文字
-    console.log(`Your input is ${options.moduleName}`)
+  if (options['ui-framework'] === 'element-ui') {
+    api.extendPackage({
+      dependencies: {
+        'element-ui': '^2.4.5'
+      }
+    })
   }
 }

@@ -13,7 +13,8 @@
         "save",
         "commit"
       ]
-    }
+    },
+    "@vue/cli-plugin-unit-jest": {}
   },
   "configs": {
     "eslintConfig": {

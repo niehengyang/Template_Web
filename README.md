@@ -1,19 +1,8 @@
-# vue-cli3-project
+# vue-preset-template
+Dead simple Vue preset template for learning use.
 
-## Project setup
+# Usage
+Just clone it and edit.
 
-切换到develop分支
-```$xslt
-git checkout -b develop
-```
-安装项目依赖包
-```
-npm install 或 cnpm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-
+# Posts
+- [10分钟搭建属于自己的 Vue CLI3 项目模板](https://savokiss.com/tech/vue-cli3-preset.html)

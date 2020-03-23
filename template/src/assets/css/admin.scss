@@ -1,0 +1,234 @@
+
+.admin-body{
+  padding: 0 60px;
+  margin-top:90px;
+}
+@media screen and (max-width:1280px){
+  .admin-body{
+    margin-top:150px;
+  }
+}
+
+
+/* 右侧主体内容部分的公共样式 */
+.main-content{
+  margin-top:26px;
+}
+
+/* 顶部搜索、按钮行样式 */
+.search-row {
+  height: 36px;
+  margin-bottom: 30px;
+}
+.search-row .search-input-group{
+  float: left;
+}
+.search-row .search-btn-group{
+  float: right;
+}
+.search-row .input-select{
+  width: 106px;
+}
+.el-icon-search{
+  cursor: pointer;
+}
+/* 表格头部样式 */
+.el-table__header thead th{
+  background: #f5f7fa;
+}
+/* 表格操作栏按钮样式 */
+.table-row .table-icon-group img{
+  margin-right: 8px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+/*表格超出省略号显示*/
+.table-row .el-table__body-wrapper .cell{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /*-webkit-line-clamp: 1;*/
+  -webkit-box-orient: vertical;
+}
+.table-row .el-table__body-wrapper .cell:hover{
+  display: block;
+}
+.el-form-item__content{
+  width: fit-content;
+}
+.el-select-dropdown__list{
+  padding: 6px 8px;
+}
+
+/* 表征状态的圆点样式 */
+.dot-circle{
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+.dot-green{
+  background: #67C23A;
+}
+.dot-red{
+  background: #ff0000
+}
+.dot-blue{
+  background:#409EFF;
+}
+.dot-warning{
+  background: #E6A23C;
+}
+.dot-danger{
+  background: #F56C6C;
+}
+.dot-info{
+  background: #909399;
+}
+
+.color-green{
+  color: #67C23A;
+}
+.color-red{
+  color: #ff0000
+}
+.color-blue{
+  color:#409EFF;
+}
+.color-warning{
+  color: #E6A23C;
+}
+.color-danger{
+  color: #F56C6C;
+}
+.color-info{
+  color: #909399;
+}
+.color-dark{
+  color:#303133;
+}
+/* 分页条样式 */
+.paginate-row{
+  margin-top: 30px;
+}
+.paginate-row .el-pagination{
+  float: right;
+}
+
+/* dialog样式，form表单样式 */
+.dialog-form .el-dialog{
+  width: 800px;
+}
+.dialog-form .el-dialog__header{
+  background: #F2F5FA;
+}
+.dialog-form .el-dialog__title{
+  font-size: 16px;
+}
+.dialog-form .el-dialog__footer{
+  border-top: 1px solid rgba(142,152,180,0.50);
+  padding: 15px 20px 15px;
+  margin: 0 4px;
+}
+.el-dialog .el-button{
+  width: 120px
+}
+.dialog-form .el-form{
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*align-content: center;*/
+  padding-left: 160px;
+}
+.dialog-form .el-input,.dialog-form .el-date-editor.el-input,.common-form-style .el-input{
+  width: 280px;
+}
+.dialog-form .el-textarea,.common-form-style .el-textarea{
+  width: 280px;
+}
+
+/* 蓝色按钮样式 */
+.el-button.blue-btn{
+  background-image: linear-gradient(45deg, #84CAFF 0%, #2489FF 100%);
+}
+.el-button.white-btn{
+  border-color: #4A90E2;
+}
+.el-button.white-btn span{
+  color: #4A90E2;
+}
+
+/* 滚动条样式 */
+.main-content::-webkit-scrollbar,.el-menu-left::-webkit-scrollbar,.el-table__body-wrapper::-webkit-scrollbar{
+  width: 9px;
+  height: 9px;
+}
+.main-content::-webkit-scrollbar-thumb,.el-menu-left::-webkit-scrollbar-thumb,.el-table__body-wrapper::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+  background: rgba(0,0,0,0.1);
+  -webkit-box-shadow: -2px 0 0 #fff inset, 1px 0 0 #fff inset, 0 -1px 0 rgba(255,255,255,0.9) inset, 0 1px 0 rgba(255,255,255,0.9) inset;
+}
+.main-content::-webkit-scrollbar-thumb:hover,.el-menu-left::-webkit-scrollbar-thumb:hover,.el-table__body-wrapper::-webkit-scrollbar-thumb:hover{
+  background-color: #909090;
+}
+.main-content::-webkit-scrollbar-track,.el-menu-left::-webkit-scrollbar-track,.el-table__body-wrapper::-webkit-scrollbar-track{
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0);
+}
+
+
+/* element图标样式 */
+.el-icon{
+  font-size: 20px;
+  cursor: pointer;
+}
+.el-icon-view{
+  color: #409EFF;
+}
+
+/* font-awesome图标样式 */
+.fa{
+  margin-right: 12px;
+}
+
+/* v-region行政区域组件样式 */
+.rg-select__el{
+  height: 36px;
+  line-height: 36px;
+}
+.main-content div.rg-select div.rg-select__el div.rg-select__content{
+  padding: 0 20px 0 15px;
+  width: 90px;
+  max-width: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*自定义按钮样式*/
+.button-plain-primary{
+  color:#6CAFFE;
+  background-color: #ffffff;
+  border-color: #6CAFFE;
+  &:hover{
+    background: #409eff;
+    border-color: #409eff;
+    color: #fff;
+  }
+}
+
+/*头像样式*/
+.el-avatar{
+  background: none;
+}
+
+
+
+
+
+
+
+

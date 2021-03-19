@@ -10,50 +10,49 @@ module.exports = (api, options, rootOptions) => {
   // 安装一些基础公共库
   api.extendPackage({
     dependencies: {
-      "axios": "^0.19.0",
-      "babel-plugin-transform-remove-console": "^6.9.4",
-      "babel-polyfill": "^6.26.0",
-      "core-js": "^2.6.5",
-      "echarts": "^4.2.1",
-      "element-ui": "^2.12.0",
-      "font-awesome": "4.7.0",
-      "image-webpack-loader": "^6.0.0",
-      "lodash": "^4.17.4",
-      "v-charts": "^1.19.0",
-      "vue": "^2.6.10",
-      "vue-baidu-map": "^0.21.22",
-      "vue-i18n": "^8.14.0",
-      "vue-router": "^3.0.3",
-      "vuex": "^3.0.1",
-      "xlsx": "^0.15.1"
+      "stats-js": "^1.0.1",
+      "axios": "0.18.1",
+      "core-js": "^3.6.5",
+      "element-ui": "2.13.0",
+      "js-cookie": "2.2.0",
+      "node-sass": "^4.14.1",
+      "normalize.css": "7.0.0",
+      "nprogress": "0.2.0",
+      "path-to-regexp": "2.4.0",
+      "sass-loader": "^9.0.3",
+      "vue": "^2.6.11",
+      "vue-router": "^3.2.0",
+      "vuex": "^3.4.0"
     },
     devDependencies: {
-      "@vue/cli-plugin-babel": "^3.11.0",
-      "@vue/cli-service": "^3.11.0",
-      "babel-plugin-transform-remove-console": "^6.9.4",
-      "image-webpack-loader": "^6.0.0",
-      "node-sass": "^4.9.0",
-      "sass-loader": "^7.1.0",
-      "vue-template-compiler": "^2.6.10"
+      "@vue/cli-plugin-babel": "~4.5.0",
+      "@vue/cli-plugin-eslint": "~4.5.0",
+      "@vue/cli-plugin-router": "^4.5.4",
+      "@vue/cli-plugin-vuex": "^4.5.4",
+      "@vue/cli-service": "~4.5.0",
+      "babel-eslint": "^10.1.0",
+      "eslint": "^6.7.2",
+      "eslint-plugin-vue": "^6.2.2",
+      "vue-template-compiler": "^2.6.11"
     }
   });
-  // 根据自定义模板生成项目结构
-  api.render('../template/template_pc')
 
   // 判断模板样式
   if (options.style == '顶部导航栏模板') {
 
-    // 注入对应文件
-    api.render({
-      './src/components/Head.vue': '../template/template_pc_style/HeadTop.vue'
-    });
+    // 生成对应项目
+    api.render('../template/template_pc_horizontal')
+
 
   } else if (options.style == '侧边导航栏模板') {
 
+    // 生成对应项目
+    api.render('../template/template_pc_vertical')
+
     // 注入对应文件
-    api.render({
-      './src/components/Head.vue': '../template/template_pc_style/HeadLeft.vue'
-    });
+    // api.render({
+    //   './src/components/Head.vue': '../template/template_pc_style/HeadLeft.vue'
+    // });
 
   }
 }

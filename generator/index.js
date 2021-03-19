@@ -43,9 +43,6 @@ module.exports = (api, options, rootOptions) => {
   // 判断模板样式
   if (options.style == '顶部导航栏模板') {
 
-    // // 生成对应项目
-    // api.render('../template/template_pc_horizontal')
-
     //注入对应文件
     api.render({
       './src/views/layout/Logo.vue': '../template/template_pc_style/horizontal/layout/Logo.vue',
@@ -54,13 +51,10 @@ module.exports = (api, options, rootOptions) => {
       './src/views/layout/Menu.vue': '../template/template_pc_style/horizontal/layout/Menu.vue',
       './src/views/layout/Navbar.vue': '../template/template_pc_style/horizontal/layout/Navbar.vue',
       './src/views/layout/TreeFolder.vue': '../template/template_pc_style/horizontal/layout/TreeFolder.vue',
-      './src/views/router/index.js': '../template/template_pc_style/horizontal/router/index.js',
+      './src/router/index.js': '../template/template_pc_style/horizontal/router/index.js'
     });
 
   } else if (options.style == '侧边导航栏模板') {
-
-    // // 生成对应项目
-    // api.render('../template/template_pc_vertical')
 
     //注入对应文件
     api.render({
@@ -70,7 +64,7 @@ module.exports = (api, options, rootOptions) => {
       './src/views/layout/Menu.vue': '../template/template_pc_style/vertical/layout/Menu.vue',
       './src/views/layout/Navbar.vue': '../template/template_pc_style/vertical/layout/Navbar.vue',
       './src/views/layout/TreeFolder.vue': '../template/template_pc_style/vertical/layout/TreeFolder.vue',
-      './src/views/router/index.js': '../template/template_pc_style/vertical/router/index.js',
+      './src/router/index.js': '../template/template_pc_style/vertical/router/index.js'
     });
 
   }

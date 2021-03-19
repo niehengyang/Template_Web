@@ -4,7 +4,7 @@
     <el-form ref="loginForm" class="login-form" :model="loginForm" :rules="loginRules" auto-complete="on" label-position="left">
 
       <div class="title-container">
-        <h3 class="title">系统模板</h3>
+        <h3 class="title">EB昆明团队系统模板</h3>
       </div>
 
       <el-form-item prop="loginname">
@@ -56,10 +56,8 @@ export default {
   data() {
     return {
       loginForm: {
-        loginname: '',
-        password: ''
-        // loginname: 'zouyan',
-        // password: '123456'
+        loginname: 'admin',
+        password: '123456'
       },
       loginRules: {
         loginname: [{ required: true, trigger: 'blur' }],
@@ -93,20 +91,20 @@ export default {
     },
     handleLogin() {
       this.$refs.loginForm.validate(valid => {
-        this.$router.push({ path: 'system/role' });
-        // if (valid) {
-        //   this.loading = true;
-        //   this.$store.dispatch('user/login', this.loginForm).then(() => {
-        //     this.$router.push({ path: this.redirect || '/' });
-        //     this.loading = false;
-        //   }).catch(() => {
-        //     // this.$message.error(err.errmsg);
-        //     this.loading = false;
-        //   });
-        // } else {
-        //   console.log('error submit!!');
-        //   return false;
-        // }
+        // this.$router.push({ path: 'system/role' });
+        if (valid) {
+          this.loading = true;
+          this.$store.dispatch('user/login', this.loginForm).then(() => {
+            this.$router.push({ path: this.redirect || '/' });
+            this.loading = false;
+          }).catch(() => {
+            // this.$message.error(err.errmsg);
+            this.loading = false;
+          });
+        } else {
+          console.log('error submit!!');
+          return false;
+        }
       });
     }
   }

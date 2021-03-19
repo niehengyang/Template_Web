@@ -32,8 +32,8 @@ const actions = {
     const { loginname, password } = userInfo;
     return new Promise((resolve, reject) => {
       login({ username: loginname.trim(), password: password }).then(response => {
-        // console.log(response)
-        if (response.errno == 200) {
+        console.log(response, '6r78578');
+        if (response.code == 200) {
           const { data } = response;
           TokenFactory.setToken(data.token);
           resolve();

@@ -9,7 +9,7 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  lintOnSave: false,
+  lintOnSave: process.env.NODE_ENV === 'development',
   publicPath: './',
   outputDir: 'dist',
   assetsDir: 'static',

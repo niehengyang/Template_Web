@@ -38,7 +38,7 @@
           @keyup.enter.native="handleLogin"
         />
         <span class="show-pwd" @click="showPwd">
-          <i :class="passwordType === 'password' ? 'el-icon-view' : 'el-icon-c-scale-to-original'" style="color: #000" />
+          <i :class="passwordType === 'password' ? 'el-icon-lock' : 'el-icon-unlock'" style="color: #000" />
         </span>
       </el-form-item>
 
@@ -174,7 +174,7 @@ $light_gray:rgb(255, 255, 255);
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image: url("../../assets/bgimg/bg83.jpg");
+  background-image: url("../../assets/bgimg/bg10.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   overflow: hidden;

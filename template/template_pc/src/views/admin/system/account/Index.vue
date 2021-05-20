@@ -286,6 +286,10 @@ export default {
 </script>
 
 <style scoped>
+.test-icon {
+  font-size: 60px;
+  color: aqua;
+}
 .add-btn {
   float: left;
 }
